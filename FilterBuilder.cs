@@ -19,7 +19,7 @@
             ops.Add(ExpressionType.OrElse, " or  ");
         }
 
-        public static string MakeFilter<T>(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] result)
+        public static string MakeFilter<T>(Expression<Func<T, bool>> predicate)
         {
             var member = predicate.Body as BinaryExpression;
             if (predicate == null || member == null)
